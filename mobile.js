@@ -51,7 +51,7 @@ class Paper {
 
         paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px) rotateZ(${this.rotation}deg)`;
       }
-    })
+    }, { passive: false })
 
     paper.addEventListener('touchstart', (e) => {
       if(this.holdingPaper) return; 
